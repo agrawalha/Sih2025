@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142993280818",
+    "firebase_url": "https://sih2025-712ef-default-rtdb.firebaseio.com",
+    "project_id": "sih2025-712ef",
+    "storage_bucket": "sih2025-712ef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142993280818:android:71027214b031f52cfd512b",
+        "android_client_info": {
+          "package_name": "com.example.sih2025"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142993280818-vdmlj9r3j9g9lru71noi9t3fam7dgsi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAxgLOizezbRivbFQY6_dBXh5eenGQg1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142993280818-vdmlj9r3j9g9lru71noi9t3fam7dgsi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

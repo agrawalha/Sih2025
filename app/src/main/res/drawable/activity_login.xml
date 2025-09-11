@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yeon"
+        android:text="Waves Of Food"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Delivers Your Favorite Food"
+        android:textColor="#1FC57A"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Login To Your Acount"
+        android:textColor="#1FC57A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/logininemail"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/email_1573_svgrepo_com"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/lato_regular"
+        android:hint="Email"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/logininpassword"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/lock_alt_svgrepo_com"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/lato_regular"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/logininemail"
+        app:layout_constraintStart_toStartOf="@+id/logininemail"
+        app:layout_constraintTop_toBottomOf="@+id/logininemail" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Or"
+        app:layout_constraintEnd_toEndOf="@+id/logininpassword"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="@+id/logininpassword"
+        app:layout_constraintTop_toBottomOf="@+id/logininpassword" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/yeon"
+        android:text="Continue With"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginingooglebut"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/whitebutton"
+        android:drawableLeft="@drawable/google_color_svgrepo_com"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/lato_regular"
+        android:paddingLeft="15dp"
+        android:text="Google"
+        app:layout_constraintEnd_toStartOf="@+id/logininfacebookbut"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logininfacebookbut"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/whitebutton"
+        android:drawableLeft="@drawable/facebook_color_svgrepo_com"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/lato_regular"
+        android:paddingLeft="15dp"
+        android:text="Facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginingooglebut"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbut"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/greenbutton"
+        android:fontFamily="@font/lato_bold"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginingooglebut" />
+
+    <TextView
+        android:id="@+id/donthavebut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Don't have An Account"
+        android:textColor="#1FC57A"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginbut"
+        app:layout_constraintStart_toStartOf="@+id/loginbut"
+        app:layout_constraintTop_toBottomOf="@+id/loginbut" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/yeon"
+        android:text="Design By\n hARSH"
+        android:textAlignment="center"
+        android:textColor="#1FC57A"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/donthavebut"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="@+id/donthavebut"
+        app:layout_constraintTop_toBottomOf="@+id/donthavebut" />
+</androidx.constraintlayout.widget.ConstraintLayout>
