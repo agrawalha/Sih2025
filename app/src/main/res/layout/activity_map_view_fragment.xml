@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapViewFragment">
+
+    <!-- Google Map View fills the entire screen -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- CardView for the search bar, giving it a nice shadow and rounded corners -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:hint="Search for a place"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- RecyclerView for showing autocomplete predictions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/predictionsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

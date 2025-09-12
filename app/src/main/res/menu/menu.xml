@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home"/>
+    <item android:title="My Reports"
+        android:id="@+id/myreportFragment"
+        android:icon="@drawable/history_svgrepo_com"/>
+    <item
+        android:title="Map View"
+        android:id="@+id/mapFragment"
+    android:icon="@drawable/map_pin_alt_svgrepo_com"/>
+
+    <item android:title="Profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_round_1342_svgrepo_com"/>
+</menu>

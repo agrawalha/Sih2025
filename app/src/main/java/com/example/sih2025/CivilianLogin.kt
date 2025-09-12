@@ -65,7 +65,16 @@ class CivilianLogin : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener{task->
             if (task.isSuccessful) {
                 val user = auth.currentUser
-                updateui(user)
+                // Check if the user's email is verified
+                if (user != null && user.isEmailVerified) {
+                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    updateui(user)
+                } else {
+                    // If email is not verified, inform the user and sign them out
+                    Toast.makeText(this, "Check Your Spam Mail Section", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please verify your email before logging in.", Toast.LENGTH_LONG).show()
+                    auth.signOut()
+                }
             } else {
                 Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
             }
@@ -111,6 +120,7 @@ class CivilianLogin : AppCompatActivity() {
         if(currentUser!=null) {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
     private fun updateui(user: FirebaseUser?) {

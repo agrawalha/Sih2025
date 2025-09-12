@@ -72,8 +72,30 @@ class CivilianSignUp : AppCompatActivity() {
     private fun createuser(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener { task->
             if(task.isSuccessful) {
-                Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show()
+                val user = auth.currentUser
+                // Send the verification email
+                user?.sendEmailVerification()
+                    ?.addOnCompleteListener { verificationTask ->
+                        if (verificationTask.isSuccessful) {
+                            Log.d("SIGNUP", "Email verification sent.")
+                            Toast.makeText(
+                                baseContext,
+                                "Account created. Verification email sent to ${user.email}.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Log.e("SIGNUP", "sendEmailVerification failed", verificationTask.exception)
+                            Toast.makeText(
+                                baseContext,
+                                "Account created, but failed to send verification email.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+
                 saveuserdata()
+                // Sign out the user to ensure they log in after verifying
+                auth.signOut()
                 startActivity(Intent(this,CivilianLogin::class.java))
                 finish()
             } else {

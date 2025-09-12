@@ -1,0 +1,29 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sih2025.Fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/activity_home_fragment" />
+
+    <fragment
+        android:id="@+id/myreportFragment"
+        android:name="com.example.sih2025.Fragments.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/activity_history_fragment" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.sih2025.Fragments.MapViewFragment"
+        android:label="Map"
+        tools:layout="@layout/activity_map_view_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sih2025.Fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/activity_profile_fragment" />
+</navigation>
