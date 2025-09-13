@@ -58,6 +58,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation(libs.androidx.constraintlayout)
     implementation("com.google.android.libraries.places:places:3.1.0")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.play.services.maps)

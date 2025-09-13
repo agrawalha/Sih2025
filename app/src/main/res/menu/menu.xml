@@ -11,7 +11,11 @@
         android:title="Map View"
         android:id="@+id/mapFragment"
     android:icon="@drawable/map_pin_alt_svgrepo_com"/>
-
+<item
+    android:title="Post A Query"
+    android:id="@+id/query"
+    android:icon="@drawable/shield_user_svgrepo_com"
+    />
     <item android:title="Profile"
         android:id="@+id/profileFragment"
         android:icon="@drawable/profile_round_1342_svgrepo_com"/>

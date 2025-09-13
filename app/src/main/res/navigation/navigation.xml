@@ -21,6 +21,13 @@
         android:name="com.example.sih2025.Fragments.MapViewFragment"
         android:label="Map"
         tools:layout="@layout/activity_map_view_fragment" />
+
+    <fragment
+        android:id="@+id/query"
+        android:name="com.example.sih2025.Fragments.QueryFragment"
+        android:label="Query"
+        tools:layout="@layout/activity_query_fragment"/>
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.sih2025.Fragments.ProfileFragment"

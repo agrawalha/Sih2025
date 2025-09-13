@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.QueryFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Address Your Query Here"
+        android:textColor="#00E676"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/videosection"
+        android:layout_width="326dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="120dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            app:resize_mode="fit"
+            app:use_controller="true" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectButton"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittextshape"
+        android:clickable="true"
+        android:drawableRight="@drawable/plus_circle"
+        android:elevation="5dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Select Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <EditText
+        android:id="@+id/queryentry"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edittextshape"
+        android:ems="10"
+        android:hint="Enter the Query In Detail"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="3"
+        android:overScrollMode="always"
+        android:padding="12dp"
+        android:scrollHorizontally="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videosection" />
+
+    <EditText
+        android:id="@+id/locationentry"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittextshape"
+        android:drawableRight="@drawable/map_pin_alt_svgrepo_com"
+        android:ems="10"
+        android:hint="Click Icon to enter location"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/queryentry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queryentry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Submit Query"
+        android:textSize="30sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#A9E9CC"
+        android:background="@drawable/greenbutton"
+        app:layout_constraintEnd_toEndOf="@+id/locationentry"
+        app:layout_constraintStart_toStartOf="@+id/locationentry"
+        app:layout_constraintTop_toBottomOf="@+id/locationentry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
